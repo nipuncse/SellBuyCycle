@@ -12,8 +12,27 @@ const port = process.env.PORT || 4200
 //Routes
 
 app.post('/', (req, res) => {
-	res.send('to server')
+	// res.send('to server')
+	console.log(req.body)
+	const { username, password } = req.body
+	Student.findOne({ username: username }, (err, user) => {
+		if (user) {
+			if (password === user.password) {
+				res.send({ message: true, user: user })
+			}
+
+			else {
+				res.send({ message: false })
+			}
+		}
+
+		else {
+			res.send({ message: "Wrong Credentials" })
+		}
+	})
 })
+
+
 app.post('/register', async (req, res) => {
 	console.log(req.body)
 	const { email, username, password } = req.body
