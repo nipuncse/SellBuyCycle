@@ -26,7 +26,7 @@ function App() {
 
 
 				<Routes>
-					<Route path="/" element={<Login />} />
+					<Route path="/" element={<Login setLogin={setLogin} />} />
 					<Route path="/register" element={<Register setLogin={setLogin} />} />
 					<Route path="/homepage" element={<Homepage login={login.username} />} />
 				</Routes>
