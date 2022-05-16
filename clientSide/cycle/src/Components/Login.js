@@ -19,7 +19,7 @@ export default function Login() {
 
 	return (
 		<>
-			<div className="container" >
+			<div className="contain" >
 				<form action="login.php" className="form" method="post" >
 					<h2>SIGN IN</h2>
 					<input type="text" id="username" value={user.username} onChange={myState} className="box" name="username" placeholder="Username" />

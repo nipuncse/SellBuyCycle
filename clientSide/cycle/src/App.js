@@ -1,6 +1,8 @@
 import Login from "./Components/Login";
 import Register from "./Components/Register";
+import Homepage from "./Components/Homepage";
 import './App.css'
+import { useState } from "react";
 // impot
 import {
 	BrowserRouter as Router,
@@ -8,6 +10,9 @@ import {
 	Route
 } from "react-router-dom";
 function App() {
+	const [login, setLogin] = useState({})
+	// const name = username
+	// const 
 	return (
 		<div className="App">
 			<video autoPlay loop muted>
@@ -21,8 +26,9 @@ function App() {
 
 
 				<Routes>
-					<Route path="/login" element={<Login />} />
-					<Route path="/register" element={<Register />} />
+					<Route path="/" element={<Login />} />
+					<Route path="/register" element={<Register setLogin={setLogin} />} />
+					<Route path="/homepage" element={<Homepage login={login.username} />} />
 				</Routes>
 			</Router>
 		</div>
