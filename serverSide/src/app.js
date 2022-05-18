@@ -45,11 +45,11 @@ app.post('/register', async (req, res) => {
 
 		const registered = await details.save();
 		console.log(registered)
-		res.send({ message: "User Successfully registered", user: details })
+		res.send({ message: 1, user: details })
 	}
 	catch (err) {
 		console.log(err)
-		res.send(err)
+		res.send({ message: 0 })
 	}
 })
 
