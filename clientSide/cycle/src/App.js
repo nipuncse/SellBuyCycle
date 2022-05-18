@@ -11,24 +11,16 @@ import {
 } from "react-router-dom";
 function App() {
 	const [login, setLogin] = useState({})
+	const test = "Heloo"
 	// const name = username
 	// const 
 	return (
 		<div className="App">
-			<video autoPlay loop muted>
-				<source
-					src={process.env.PUBLIC_URL + "/videos/bg.mp4"}
-					type="video/mp4"
-				/>
-				Your browser does not support the video tag.
-			</video>
 			<Router>
-
-
 				<Routes>
 					<Route path="/" element={<Login setLogin={setLogin} />} />
-					<Route path="/register" element={<Register setLogin={setLogin} />} />
-					<Route path="/homepage" element={<Homepage login={login.username} />} />
+					<Route path="/register" element={<Register setLogin={setLogin} test={test} />} />
+					<Route path="/homepage" element={login && login._id ? <Homepage login={login.username} /> : <Login setLogin={setLogin} />} />
 				</Routes>
 			</Router>
 		</div>

@@ -3,8 +3,9 @@ import '../css/register.css';
 import { Link } from "react-router-dom"
 import axios from 'axios'
 import { useNavigate } from "react-router-dom";
-export default function Register({ setLogin }) {
+export default function Register(props) {
 	let navigate = useNavigate();
+	const setLogin = props.setLogin
 	const [newUser, setnewUser] = useState({
 		email: "",
 		username: "",
@@ -23,18 +24,25 @@ export default function Register({ setLogin }) {
 		// const { email, username, password } = newUser
 		console.log('called newEnrty')
 		const res = await axios.post("http://localhost:4200/register", newUser)
-		if (res) {
+		if (res.data.message === 1) {
 			console.log(res.data.user)
 			setLogin(res.data.user)
 			navigate('/homepage')
 		}
 		else
-			console.log(res)
+			alert("User already Registered")
 	}
 
 
 	return (
 		<>
+			<video autoPlay loop muted>
+				<source
+					src={process.env.PUBLIC_URL + "/videos/bg.mp4"}
+					type="video/mp4"
+				/>
+				Your browser does not support the video tag.
+			</video>
 			<div className="contain">
 				<div className="form">
 					<h2>SIGN UP</h2>

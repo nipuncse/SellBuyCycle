@@ -34,6 +34,14 @@ export default function Login({ setLogin }) {
 
 	return (
 		<>
+
+			<video autoPlay loop muted>
+				<source
+					src={process.env.PUBLIC_URL + "/videos/bg.mp4"}
+					type="video/mp4"
+				/>
+				Your browser does not support the video tag.
+			</video>
 			<div className="contain" >
 				<div className="form">
 					<h2>SIGN IN</h2>
