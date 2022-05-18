@@ -26,7 +26,7 @@ export default function Register(props) {
 		const res = await axios.post("http://localhost:4200/register", newUser)
 		if (res.data.message === 1) {
 			console.log(res.data.user)
-			setLogin(res.data.user)
+			props.updateUser(res.data.user)
 			navigate('/homepage')
 		}
 		else

@@ -3,7 +3,7 @@ import '../css/login.css';
 import { Link } from "react-router-dom";
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
-export default function Login({ setLogin }) {
+export default function Login(props) {
 	let navigate = useNavigate();
 
 	const [user, setUser] = useState({
@@ -23,7 +23,7 @@ export default function Login({ setLogin }) {
 	const validatUser = async () => {
 		const res = await axios.post("http://localhost:4200", user)
 		if (res.data.message === true) {
-			setLogin(res.data.user)
+			props.updateUser(res.data.user)
 			navigate('/homepage')
 		}
 		else {

@@ -13,7 +13,7 @@ export default function Navbar(props) {
 				</div>
 
 				<div className="logout  mx-2">
-					<a className="navbar-brand text-light" href="/">Logout</a>
+					<a className="navbar-brand text-light" onClick={() => props.logout({})} href="/">Logout</a>
 				</div>
 			</nav>
 		</>
