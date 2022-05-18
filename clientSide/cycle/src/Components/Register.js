@@ -5,7 +5,7 @@ import axios from 'axios'
 import { useNavigate } from "react-router-dom";
 export default function Register(props) {
 	let navigate = useNavigate();
-	const setLogin = props.setLogin
+	// const setLogin = props.setLogin
 	const [newUser, setnewUser] = useState({
 		email: "",
 		username: "",
