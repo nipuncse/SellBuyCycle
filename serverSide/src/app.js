@@ -3,6 +3,7 @@ const conn = require('./db/conn.js')
 const cors = require('cors')
 const path = require('path')
 const Student = require('./models/register')
+const CycleInfo = require('./models/cycles')
 const app = express();
 
 app.use(express.json())
@@ -51,6 +52,25 @@ app.post('/register', async (req, res) => {
 		console.log(err)
 		res.send({ message: 0 })
 	}
+})
+
+app.get('/getcycles', (req, res) => {
+
+	CycleInfo.find({}, function (err, allDetails) {
+		if (err) {
+			console.log(err);
+		} else {
+			res.send({ details: allDetails })
+		}
+	})
+
+	// try {
+	// 	const ans = CycleInfo.find();
+	// 	res.send(ans);
+	// }
+	// catch (err) {
+	// 	console.log(err)
+	// }
 })
 
 app.listen(port, () => {
