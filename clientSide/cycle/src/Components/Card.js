@@ -9,8 +9,10 @@ export default function Card(props) {
 					<h5 className="card-title">{props.cycle_name}</h5>
 					<p className="card-text">Company: {props.cycle_company}</p>
 					<p className="card-text">Owner: {props.owner_name}</p>
+					<p className="card-text">Price: Rs {props.cycle_price}</p>
 					<p className="card-text">Contact: {props.contact}</p>
-					<a href="/" className="btn btn-primary">Contact Owner</a>
+					<p className="card-text">Details: {props.cycle_desc}</p>
+					{/* <button type="button" class="btn btn-warning">Owner Info</button>	 */}
 				</div>
 			</div>
 		</>

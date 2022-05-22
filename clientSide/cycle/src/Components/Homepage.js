@@ -23,7 +23,7 @@ export default function Homepage(props) {
 					{/* <Card /> */}
 					{newData.map((element) => {
 						return (
-							<Card cycle_name={element.cycle_name} cycle_company={element.cycle_company} owner_name={element.owner_name} contact={element.owner_contact} />
+							<Card cycle_name={element.cycle_name} cycle_company={element.cycle_company} cycle_price={element.cycle_price} owner_name={element.owner_name} contact={element.owner_contact} cycle_desc={element.cycle_desc} />
 						)
 					})};
 
