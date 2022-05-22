@@ -16,6 +16,9 @@ export default function Navbar(props) {
 				<div className="sell  mx-2">
 					<a className="navbar-brand text-light" href="/sell">Sell Cycle</a>
 				</div>
+				<div className="delete  mx-2">
+					<a className="navbar-brand text-light" href="/delete">Delete Cycle</a>
+				</div>
 
 				<div className="logout  mx-2">
 					<a className="navbar-brand text-light" onClick={() => props.logout({})} href="/">Logout</a>

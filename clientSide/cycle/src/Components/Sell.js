@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from './Navbar'
 import axios from 'axios'
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 export default function Sell(props) {
-	let navigate = useNavigate();
+	// let navigate = useNavigate();
 	const [newCycle, setnewCycle] = useState({
-		userid: props.login,
+		userid: "",
 		cname: "",
 		ccname: "",
 		oname: "",
@@ -14,13 +14,24 @@ export default function Sell(props) {
 		cdesc: "",
 	})
 
+	useEffect(() => {
+		setnewCycle({
+			...newCycle,
+			userid: props.login
+		})
+
+	}, []);
+
 	const settingC = e => {
 		const { name, value } = e.target
 		setnewCycle({
 			...newCycle,
+
 			[name]: value
 		})
+
 	}
+
 
 	const addCycle = async () => {
 		const res = await axios.post("http://localhost:4200/addnewcycle", newCycle)

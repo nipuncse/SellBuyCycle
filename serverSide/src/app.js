@@ -66,6 +66,7 @@ app.get('/getcycles', (req, res) => {
 })
 
 app.post('/addnewcycle', async (req, res) => {
+	console.log(req.body)
 	const { userid, cname, ccname, oname, ocont, cprice, cdesc } = req.body;
 	try {
 		const details = new CycleInfo({
@@ -88,6 +89,18 @@ app.post('/addnewcycle', async (req, res) => {
 		res.send({ message: 0 })
 	}
 
+})
+
+app.post('/getcycles2', (req, res) => {
+	console.log(req.body)
+	const { id } = req.body
+	CycleInfo.find({ user: id }, function (err, allDetails) {
+		if (err) {
+			console.log(err);
+		} else {
+			res.send({ details: allDetails })
+		}
+	})
 })
 
 app.listen(port, () => {
