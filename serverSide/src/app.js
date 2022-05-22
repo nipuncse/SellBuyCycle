@@ -63,14 +63,31 @@ app.get('/getcycles', (req, res) => {
 			res.send({ details: allDetails })
 		}
 	})
+})
 
-	// try {
-	// 	const ans = CycleInfo.find();
-	// 	res.send(ans);
-	// }
-	// catch (err) {
-	// 	console.log(err)
-	// }
+app.post('/addnewcycle', async (req, res) => {
+	const { userid, cname, ccname, oname, ocont, cprice, cdesc } = req.body;
+	try {
+		const details = new CycleInfo({
+			user: userid,
+			cycle_name: cname,
+			cycle_company: ccname,
+			owner_name: oname,
+			owner_contact: ocont,
+			cycle_desc: cdesc,
+			cycle_price: cprice
+		})
+
+
+		const registered = await details.save();
+		console.log(registered)
+		res.send({ message: 1, cycle: registered })
+	}
+	catch (err) {
+		console.log(err)
+		res.send({ message: 0 })
+	}
+
 })
 
 app.listen(port, () => {

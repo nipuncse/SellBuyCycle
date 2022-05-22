@@ -16,6 +16,12 @@ const cycleInfo = new Schema({
 	},
 	cycle_desc: {
 		type: String
+	},
+	cycle_price: {
+		type: String
+	},
+	user: {
+		type: String
 	}
 })
 
