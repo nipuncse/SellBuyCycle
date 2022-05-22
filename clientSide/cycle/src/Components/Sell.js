@@ -14,18 +14,13 @@ export default function Sell(props) {
 		cdesc: "",
 	})
 
-	useEffect(() => {
-		setnewCycle({
-			...newCycle,
-			userid: props.login
-		})
 
-	}, []);
 
-	const settingC = e => {
+	const settingC = async (e) => {
 		const { name, value } = e.target
 		setnewCycle({
 			...newCycle,
+			userid: props.login,
 			[name]: value
 		})
 
@@ -33,6 +28,8 @@ export default function Sell(props) {
 
 
 	const addCycle = async () => {
+		console.log('this is in')
+		// await settingC()
 		const res = await axios.post("http://localhost:4200/addnewcycle", newCycle)
 		if (res.data.message === 1) {
 			alert("Cycle is added succesfully")
