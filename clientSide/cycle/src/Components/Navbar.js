@@ -9,7 +9,7 @@ export default function Navbar(props) {
 					Welcome {props.user} !
 				</div>
 				<div className="container-fluid justify-content-center  ">
-					<a className="navbar-brand text-primary" href="/">CYCLEZ</a>
+					<a className="navbar-brand text-primary" href="/homepage">CYCLEZ</a>
 				</div>
 
 				<div className="sell  mx-2">
