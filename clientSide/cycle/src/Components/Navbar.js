@@ -4,7 +4,7 @@ export default function Navbar(props) {
 
 	return (
 		<>
-			<nav className="navbar navbar-expand-lg bg-dark d-flex justify-content-between ">
+			<nav className="navbar navbar-expand-lg bg-success d-flex justify-content-between ">
 				<div className="welcome navbar-brand text-light mx-2">
 					{/* {console.log(props.name)} */}
 					Welcome {props.user} !

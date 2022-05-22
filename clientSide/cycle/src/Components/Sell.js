@@ -26,7 +26,6 @@ export default function Sell(props) {
 		const { name, value } = e.target
 		setnewCycle({
 			...newCycle,
-
 			[name]: value
 		})
 

@@ -103,6 +103,18 @@ app.post('/getcycles2', (req, res) => {
 	})
 })
 
+app.post('/delcycle', (req, res) => {
+	console.log(req.body)
+	const { address } = req.body
+	CycleInfo.remove({ _id: address }, function (err, allDetails) {
+		if (err) {
+			console.log(err);
+		} else {
+			res.send({ details: allDetails })
+		}
+	})
+})
+
 app.listen(port, () => {
 	console.log('Server listened')
 })

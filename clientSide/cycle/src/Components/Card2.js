@@ -1,6 +1,20 @@
 import React from 'react'
+import { useNavigate } from "react-router-dom";
 
+import axios from 'axios'
 export default function Card2(props) {
+	let navigate = useNavigate();
+	const deleteCycle = async (e) => {
+		// console.log(e.target.id)
+		const res = await axios.post("http://localhost:4200/delcycle", {
+			address: e.target.id
+		});
+		const res2 = await axios.post("http://localhost:4200/getcycles2", {
+			id: props.login
+		});
+		props.setnewData(res2.data.details)
+		navigate('/delete')
+	}
 	return (
 		<>
 			<div className="card col-4 mx-3 my-3" style={{ width: "18rem" }}>
@@ -12,7 +26,7 @@ export default function Card2(props) {
 					<p className="card-text">Price: Rs {props.cycle_price}</p>
 					{/* <p className="card-text">Contact: {props.contact}</p> */}
 					{/* <p className="card-text">Details: {props.cycle_desc}</p> */}
-					<button type="button" class="btn btn-warning">Delete</button>
+					<button type="button" id={props.id} onClick={deleteCycle} class="btn btn-warning">Delete</button>
 				</div>
 			</div>
 		</>
