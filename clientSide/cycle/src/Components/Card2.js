@@ -5,7 +5,6 @@ import axios from 'axios'
 export default function Card2(props) {
 	let navigate = useNavigate();
 	const deleteCycle = async (e) => {
-		// console.log(e.target.id)
 		const res = await axios.post("http://localhost:4200/delcycle", {
 			address: e.target.id
 		});
@@ -22,10 +21,7 @@ export default function Card2(props) {
 				<div className="card-body">
 					<h5 className="card-title">{props.cycle_name}</h5>
 					<p className="card-text">Company: {props.cycle_company}</p>
-					{/* <p className="card-text">Owner: {props.owner_name}</p> */}
 					<p className="card-text">Price: Rs {props.cycle_price}</p>
-					{/* <p className="card-text">Contact: {props.contact}</p> */}
-					{/* <p className="card-text">Details: {props.cycle_desc}</p> */}
 					<button type="button" id={props.id} onClick={deleteCycle} class="btn btn-warning">Delete</button>
 				</div>
 			</div>

@@ -10,10 +10,8 @@ app.use(express.json())
 app.use(express.urlencoded())
 app.use(cors())
 const port = process.env.PORT || 4200
-//Routes
 
 app.post('/', (req, res) => {
-	// res.send('to server')
 	console.log(req.body)
 	const { username, password } = req.body
 	Student.findOne({ username: username }, (err, user) => {
