@@ -1,0 +1,65 @@
+[{
+  "_id": {
+    "$oid": "6288e75d390f234f31db5c7a"
+  },
+  "email": "nipunchotu23@gmail.com",
+  "username": "nipun_23",
+  "password": "Hu8#de100",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "628a0c95d785cec569b44cbb"
+  },
+  "email": "20103178@mail.jiit.ac.in",
+  "username": "20103178",
+  "password": "IAS",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "628a0eb0d785cec569b44ccb"
+  },
+  "email": "yash19@gmail.com",
+  "username": "yash",
+  "password": "jain",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "628a26e2d785cec569b44cd4"
+  },
+  "email": "mahiman@jain.com",
+  "username": "mahiman",
+  "password": "jain",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "628a6dcd4d74d846470ec9bf"
+  },
+  "email": "test@test.com",
+  "username": "test123",
+  "password": "test123",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "628a8180196a9c6dad7057f4"
+  },
+  "email": "chotu23@gmail.com",
+  "username": "yashika",
+  "password": "jain",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "628a8ce208a047fe17779ed4"
+  },
+  "email": "wahwah@wah.com",
+  "username": "wahwah",
+  "password": "1234",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62a7739ffc3e38df51312f9c"
+  },
+  "email": "krishna@gmail.com",
+  "username": "krishna",
+  "password": "garg",
+  "__v": 0
+}]

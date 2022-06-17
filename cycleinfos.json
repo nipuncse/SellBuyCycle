@@ -1,0 +1,73 @@
+[{
+  "_id": {
+    "$oid": "6289e42b9824b1643892c204"
+  },
+  "cycle_name": "Trek",
+  "cycle_company": "Atlas",
+  "owner_name": "shrey",
+  "owner_contact": "7894561231",
+  "cycle_desc": "heloo 1233",
+  "cycle_price": "1400",
+  "__v": 0,
+  "user": "20103178"
+},{
+  "_id": {
+    "$oid": "628a0e46d785cec569b44cc8"
+  },
+  "cycle_name": "Avinya",
+  "cycle_company": "TATA",
+  "owner_name": "Ratan Tata",
+  "owner_contact": "1234567984",
+  "cycle_desc": "New Innovation in the world of cycle. Today's Tomorrow",
+  "cycle_price": "9500",
+  "__v": 0,
+  "user": "yash"
+},{
+  "_id": {
+    "$oid": "628a0f36d785cec569b44ccf"
+  },
+  "cycle_name": "cls",
+  "cycle_company": "BMW",
+  "owner_name": "Yash Jain",
+  "owner_contact": "6377737523",
+  "cycle_desc": "Premium class and lace modern technology.",
+  "cycle_price": "20000",
+  "__v": 0,
+  "user": "yash"
+},{
+  "_id": {
+    "$oid": "628a2767d785cec569b44cd8"
+  },
+  "cycle_name": "RoadStar",
+  "cycle_company": "Mahindra",
+  "owner_name": "Mahiman Jain(Steel wale)",
+  "owner_contact": "100",
+  "cycle_desc": "Very handpump cycle. Made of good quality steel.",
+  "cycle_price": "200000",
+  "__v": 0,
+  "user": "mahiman"
+},{
+  "_id": {
+    "$oid": "628a8958ed9e698895f4c2bd"
+  },
+  "cycle_name": "Hero",
+  "cycle_company": "Atlas",
+  "owner_name": "Nipun",
+  "owner_contact": "9462483561",
+  "cycle_desc": "good Cycle",
+  "cycle_price": "12000",
+  "user": "nipun_23",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "628a89c6ed9e698895f4c2c8"
+  },
+  "cycle_name": "hero2",
+  "cycle_company": "newAtlas",
+  "owner_name": "nipun",
+  "owner_contact": "9462483561",
+  "cycle_desc": "ghhgghh",
+  "cycle_price": "4500",
+  "user": "nipun_23",
+  "__v": 0
+}]
